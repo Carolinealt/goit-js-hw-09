@@ -25,8 +25,8 @@ form.addEventListener('input', e => {
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  const email = emailForm.value.trim(); // видаляємо пробіли по краях
-  const message = messageForm.value.trim(); // видаляємо пробіли по краях
+  const email = emailForm.value.trim(); 
+  const message = messageForm.value.trim(); 
 
   if (email && message) {
     const obj = { email, message };
