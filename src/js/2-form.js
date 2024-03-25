@@ -26,14 +26,18 @@ form.addEventListener('input', e => {
 form.addEventListener('submit', e => {
   e.preventDefault();
   const email = emailForm.value.trim(); 
-  const message = messageForm.value.trim(); 
+  const message = messageForm.value.trim();
+  
+  if (
+    !email || !message
+  ) {
+    window.alert("Будь ласка, заповніть усі поля форми")
+  }
 
   if (email && message) {
     const obj = { email, message };
     console.log(obj);
     form.reset();
     localStorage.clear();
-  } else {
-    console.log('Будь ласка, заповніть усі поля форми.');
   }
 });
